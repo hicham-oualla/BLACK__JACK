@@ -12,7 +12,7 @@ public class PaquetCartes {
         totalValuePlayer = 0;
     }
 
-    public String randomCardPlayer() {
+    public String Melanger() {
         int typeRandom = random.nextInt(typeArr.length);
         int valueRandom = random.nextInt(valueArr.length);
 
@@ -26,7 +26,7 @@ public class PaquetCartes {
     public int getTotalValuePlayer() {
         return totalValuePlayer;
     }
-
+//
     public int getValueAsNumber(String value) {
         if (value.equals("Ace")) {
             if (totalValuePlayer > 21) {

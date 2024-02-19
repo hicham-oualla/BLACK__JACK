@@ -1,13 +1,28 @@
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        PaquetCartes paquet = new PaquetCartes();
 
-        // Tirer plusieurs cartes et afficher les résultats
-      //  for (int i = 0; i < 2; i++) {
-            String card = paquet.randomCardPlayer();
-            System.out.println("Carte tirée : " + card);
-            System.out.println("Total Value: " + paquet.getTotalValuePlayer());
-            System.out.println();
-        //}
+
+
+        static La_main laMain = new La_main();
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            int choice;
+            System.out.println("-------------------------------------------");
+            System.out.println("  BIENVENUE AU BLACKJACK   ");
+            System.out.println("  1. Commencer             ");
+            System.out.println("  2. Exit                  ");
+            System.out.println("-------------------------------------------");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+            switch (choice){
+                case 1:
+                    laMain.Distribuer_cartes();
+                    break;
+                case 2 :
+
+                    break;
+                default:
+                    System.out.println("Entrer 1 ou 2");
+            }
+        }
     }
-}
